@@ -1,7 +1,8 @@
 const express = require("express");
-const sqlite3 = require("sqlite3");
+//const sqlite3 = require("sqlite3");
 const app = express();
 const port = 80;
+/* 
 const db = new sqlite3.Database("mydatabase.db");
 db.serialize(() => {
   db.run(
@@ -31,3 +32,15 @@ app.post("/items", (req, res) => {
 app.listen(port, () => {
   console.log(`Server working on ${port}`);
 });
+*/
+app.get('/', (req, res) => {
+  res.send('Hello World')
+})
+
+app.get('/about', (req, res) => {
+  res.send('About route 🎉 ')
+})
+
+app.listen(PORT, () => {
+  console.log(`✅ Server is running on port ${PORT}`);
+})
