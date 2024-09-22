@@ -1,7 +1,7 @@
 const express = require("express");
 const sqlite3 = require("sqlite3");
 const app = express();
-const port = 3000;
+const port = 80;
 const db = new sqlite3.Database("mydatabase.db");
 db.serialize(() => {
   db.run(
